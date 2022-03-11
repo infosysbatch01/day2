@@ -1,0 +1,105 @@
+class Customer{
+   public static void main(String[] args){
+    int id;
+    String name;
+    String address;
+    String foodOrdered;  
+    id=1;
+    name="Rohit";
+    address="A/122 Radha Nagar, Delhi";
+    foodOrdered="Pizza";
+    System.out.println(id);
+    System.out.println(name);
+    System.out.println(address);
+    System.out.println(foodOrdered);
+   }
+ }
+--------------------------------------------------------------------------------------
+class Customer{
+   public static void main(String[] args){
+    // id,name,address are local variable to the main method. 
+    int id=1;
+    String name="Rohit";
+    String address="A/122 Radha Nagar, Delhi";
+    String foodOrdered="Pizza";
+    System.out.println(id);
+    System.out.println(name);
+    System.out.println(address);
+    System.out.println(foodOrdered);
+   }
+ }
+
+---------------------------------------------------------------------------------------
+class is a blueprint and object brings class into usage. 
+We have primitive data type but we cannot work with the datatype until unless we create a variable.
+ int num; // int is a datatype and num is variable
+class Customer {}
+ 1. Customer cust=new Customer();
+Customer cust=65430;
+
+// new Customer() in RHS is actually creating a new object during the runtime and the address
+// of the newly created object is stored in the reference variable cust. 
+----------------------------------------------------------------------------------------
+class CustomerDetails{
+// id, name,address,foodOrdered are instance variables, member variables, attributes of Customer //class. To access these attributes we require the objectname.attributename.
+    int id;
+    String name;
+    String address;
+    String foodOrdered;
+
+    public static void main(String args[]) {
+     CustomerDetails customer=new CustomerDetails();
+     CustomerDetails customer2=new CustomerDetails();
+     customer.id=1;
+     customer.name="Ravi";
+     customer.address="A/15 Netaji Nagar, Kolkata";
+     customer.foodOrdered="sweets";
+     customer2.id=2;
+     customer2.name="Suresh";
+     customer2.address="54/1 Marine Drive,Mumbai";
+     customer2.foodOrdered="Pizza";
+     System.out.println(customer.id);
+     System.out.println(customer.name);
+     System.out.println(customer.address);
+     System.out.println(customer.foodOrdered);
+     System.out.println(customer2.id);
+     System.out.println(customer2.name);
+     System.out.println(customer2.address);
+     System.out.println(customer2.foodOrdered);
+     
+    }
+  }
+------------------------------------------------------------------------------------------
+
+class CustomerDetails2{
+// id, name,address,foodOrdered are instance variables, member variables, attributes of Customer //class. To access these attributes we require the objectname.attributename.
+    int id;
+    String name;
+    String address;
+    String foodOrdered;
+    
+   // setData, dispData, main
+    void setData(){
+     id=1;
+     name="Akash";
+     address="Delhi";
+     foodOrdered="Pizza";
+    }
+
+    void dispData(){
+     System.out.println(id);
+     System.out.println(name);
+     System.out.println(address);
+     System.out.println(foodOrdered);
+    }    
+
+    public static void main(String args[]) {
+     CustomerDetails2 customer=new CustomerDetails2();
+     customer.setData();
+     customer.dispData();
+       
+    }
+  }
+
+
+  
