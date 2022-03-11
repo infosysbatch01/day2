@@ -1,0 +1,214 @@
+* Iterations/loops
+  ** intialisation of some variable which will decide whether to enter the loop or not.
+  ** condition check which decides to enter the loop initially and latter whether to be within the
+     loop or to move out of the loop 
+  ** Reinitialisation of the variable so that the value of the variable changes and whose
+     changed value will decide whether to remain within the loop or to move out of the loop. 
+-----------------------------------------------------------------------------------------------
+  class WhileLoopDemo1 {
+      public static void main(String []str){
+        int ctr=0;  //intialisation of some variable which will decide whether to enter the loop or not.
+       while(ctr<10) //condition check which decides to enter the loop initially and latter whether                        //to be within the loop or to move out of the loop 
+         {
+         System.out.println(ctr);
+         ctr++;  //Reinitialisation of the variable so that the value of the variable changes and          whose changed value will decide whether to remain within the loop or to move out of the loop.
+     
+         }
+         System.out.println("Out of the loop");
+     }
+  } 
+
+---------------------------------------------------------------------------------------------
+ entry-controlled loop.  
+class WhileLoopDemo2 {
+   public static void main(String []str){
+  int ctr=10;
+  while(ctr<10){
+    System.out.println(ctr);
+    ctr++;
+   }
+
+ }
+} 
+[No output will be shown ]
+----------------------------------------------------------------------------------
+
+import java.util.Scanner;  
+
+public class UserInputDemo1 {
+   public static void main(String args[]) {
+    Scanner scanner=new Scanner(System.in); //Scanner is a predefined class
+    // and we are creating an object of scanner class by writing new Scanner(System.in)
+    // and that object's reference is stored in the reference variable scanner
+   // Scanner scan=new Scanner(System.in); // in is an object of InputStream which is with System class
+   // In c programming int *ptr; int num=10; ptr=&num;  
+    int num;
+    String name;
+    float score;
+    System.out.println("Enter the number");
+    num=scanner.nextInt();
+    System.out/println("Enter the name");
+    name=scanner.next();  // For String
+    System.out.println("Enter the score");
+    score=scanner.nextFloat();
+    System.out.println("The value of num is: "+num);
+    System.out.println("The value of name is: "+name);
+    System.out.println("The value of score is: "+score);
+   }
+ }
+
+ ----------------------------------------------------------  
+import java.util.Scanner;  
+public class UserInputDemo2 {
+   public static void main(String args[]) {
+    Scanner scanner=new Scanner(System.in); 
+    String name;
+    System.out.println("Enter the name");
+    name=scanner.nextLine();
+    // nextLine can accept a string with spaces in between which cannot 
+    // be done with next() method
+    System.out.println("The value of name is: "+name);
+   
+   }
+ }
+---------------------------------------------------------------------------------
+// Enter number from user and keep on adding those number till user enters any positive 
+// number
+
+import java.util.Scanner;  
+public class WhileDemo3 {
+   public static void main(String args[]) {
+    Scanner scanner=new Scanner(System.in); 
+    int num=1,sum=0;
+    while(num>0)
+      {    
+    System.out.println("Enter the number");
+    num=scanner.nextInt();
+    //sum=sum+num;
+      sum+=num;
+     }
+    System.out.println(sum);
+  }
+}
+------------------------------------------------------------------------------------------------------------------------------------
+//exit-controlled loop.  
+public class DoWhileDemo1 {
+  public static void main(String args[]) {
+       int i=0;
+      do{
+       System.out.println(i);
+       i++; 
+      }while(i<10);   
+  }
+}
+
+-------------------------------------------------------------------------------------------------------------------
+// In do while loop , if the condition is false , then also it is 
+// executed once but in case of while loop as it is entry contolled loop,
+// if the condition is false and as it is checked during the entry of the loop,
+// the loop is not executed.
+public class DoWhileDemo2 {
+  public static void main(String args[]) {
+       int i=11;
+      do{
+       System.out.println(i);
+       i++; 
+      }while(i<10);   
+  }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+public class ForLoop1 {
+    public static void main(String args[]) {
+    for(int i=0;i<10;i++) {
+     System.out.println(i);
+    }
+  }
+ }
+
+
+
+public class ForLoop2 {
+    public static void main(String args[]) {
+    for(int i=10;i<10;i++) {
+     System.out.println(i);
+    }
+  }
+ }
+
+
+1
+12
+123
+1234
+12345
+/*
+   row    col
+    1      1            1
+    2      12           1 2
+    3      123          1 2 3
+
+*/
+
+
+public class NestedLoop  {
+    public static void main(String args[]) {
+    for(int row=1;row<=5;row++)
+     {
+     for(int col=1;col<=row;col++)
+        {
+           System.out.println(row);
+        }
+     }
+   }
+}
+
+// Let use continue the loop till user enters 0
+
+import java.util.Scanner;
+public class BreakWithLoop {
+    public static void main(String args[]) {
+    int num;
+    int sum=0;
+    Scanner scanner=new Scanner(System.in);
+    System.out.println("Enter the number");
+    while(true) {
+     System.out.println("Enter the number");
+     num=scanner.nextInt();
+     if(num==0){
+      break;
+     }
+      sum+=num;
+    }
+    System.out.println(sum);
+   }
+ }
+
+------------------------------------------------------------------------------------
+Enter 10 numbers from user and count the number of even numbers
+
+import java.util.Scanner;
+public class ContinueWithLoop {
+    public static void main(String args[]) {
+    int num;
+    int count=0;
+    Scanner scanner=new Scanner(System.in);
+    for(int i=0;i<10;i++) {
+    System.out.println("Enter the number");
+    num=scanner.nextInt();
+    if(num%2==0)
+    {
+     count++;
+    }
+    else{
+          continue;
+        } 
+     System.out.println("This is the "+count);
+   } // end of for
+    System.out.println("Total number of even numbers "+count);
+ }   // end of main
+}   // end of class
+
+
+
